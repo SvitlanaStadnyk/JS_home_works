@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Всплытие событий</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/colorpicker.css" />
+    <style>
+      #parent,
+      #child,
+      #inner-child {
+        margin: 16px;
+        padding: 16px;
+        border: 1px solid #ffc107;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      #parent {
+        background-color: #673ab7;
+      }
+
+      #child {
+        background-color: #448aff;
+      }
+
+      #inner-child {
+        background-color: #009688;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        outline: 2px solid tomato;
+      }
+
+      button {
+        margin: 4px;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 8px;
+        background-color: #fff;
+        list-style: none;
+        user-select: none;
+        outline: 1px solid tomato;
+      }
+
+      .tags__item {
+        /* padding: 10px;
+        /* outline: 1px solid green; */
+        margin: 4px;
+      }
+
+      .tags__btn {
+        border: 1px solid #212121;
+        border-radius: 4px;
+        display: inline-block;
+        padding: 4px 10px 4px;
+
+        font-size: 24px;
+        font-family: inherit;
+        color: #212121;
+        font-weight: 500;
+        text-align: center;
+        white-space: nowrap;
+        text-decoration: none;
+        outline: none;
+
+        background-color: #fff;
+        cursor: pointer;
+      }
+
+      .tags__btn--active {
+        color: #fff;
+        background-color: #3f51b5;
+      }
+    </style>
+  </head>
+  <body>
+    <p><a href="/">На главную</a></p>
+
+    <div id="parent">
+      PARENT
+      <div id="child">
+        CHILD
+        <div id="inner-child">INNER-CHILD</div>
+      </div>
+    </div>
+    <p>_</p>
+    <button class="js-add-btn">Add button</button>
+    <hr />
+    <div class="container js-container">
+      <button type="button">Button 1</button>
+      <button type="button">Button 2</button>
+      <button type="button">Button 3</button>
+      <button type="button">Button 4</button>
+      <button type="button">Button 5</button>
+    </div>
+    -->
+
+    <ul class="tags js-tags">
+      <li class="tags__item">
+        <button class="tags__btn" data-value="html">#html</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="css">#css</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="javascript">#javascript</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="npm">#npm</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="webpack">#webpack</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="react">#react</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="redux">#redux</button>
+      </li>
+      <li class="tags__item">
+        <button class="tags__btn" data-value="nodejs">#nodejs</button>
+      </li>
+    </ul>
+    <div class="palette js-palette">
+      <!-- <div class="color-card">
+        <div
+          class="color-swatch"
+          data-hex="#955014"
+          data-rgb="149,80,20"
+          style="background-color: #955014"
+        ></div>
+      </div> -->
+    </div>
+    <script src="/js/29.js" type="module"></script>
+  </body>
+</html>
